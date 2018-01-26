@@ -1,0 +1,222 @@
+/* set the font for the body */
+
+/*Set the color of the overall navbar*/
+.navbar-default {
+    background-color:   #b62f2f;
+}
+
+/*Set the color  of the text in the navbar*/
+.navbar-default .navbar-nav > li > a {
+    color: #FFF5EE;
+    font-family: Helvetica Header;
+    font-size: 1.2em;
+    
+}
+
+/*set the color of the selected tab in the navbar*/
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background-color:  #800000; /*Background color of text*/
+    color:  #FFF5EE; /*Color of the text*/
+
+
+}
+
+/*set the color of the brand label*/
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color:#FFF5EE;
+    font-size: 1.5em;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+/* set the style for the zoom out buttom */
+#zoomOut {
+    border: 0;
+    background: transparent;
+    opacity: 0.7;
+}
+
+#zoomOut:hover {
+    opacity: 1;
+}
+
+/* set the style for the bubbles */
+.bubbles {
+  fill: brown;
+  fill-opacity: .5;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+.bubbles:hover {
+  stroke: #000;
+}
+
+/* set the style for the rectangle that allows user to zoom out */
+.background {
+    fill: none;
+    pointer-events: all;
+}
+
+/* set the style for the tooltip */
+.d3-tip {
+    line-height: 1.5;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.d3-tip.n:after {
+    margin: -2px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+/* set the style for the legends */
+.key path {
+  display: none;
+}
+
+.key line {
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.legend-title {
+    font-weight: bold;
+}
+
+.legend-box {
+    fill: none;
+    stroke: #888;
+    font-size: 10px;
+}
+
+/* set the style for the counties */
+#counties {
+    fill: none;
+    stroke: grey;
+    stroke-width: 0.25;
+}
+
+#counties.active {
+    display: none;
+}
+
+.county {
+    fill: #ffffe5;
+    stroke: grey;
+    stroke-width: 0.25;
+}
+
+.county:hover {
+    stroke: black;
+    stroke-width: 2;
+}
+
+/* set the style for the states' borders */
+#state-borders {
+    fill: none;
+    stroke: black;
+    stroke-width: 0.6;
+    stroke-linejoyin: round;
+    pointer-events: none;
+}
+
+/* set the style for the slider */
+#sliderContainer {
+    width: 400px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 400px;
+    height: 8px;
+    border-radius: 1.5px;  
+    background: transparent;
+    outline: none;
+    opacity: 0.5;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 0.8;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%; 
+    background: black;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+}
+
+.slider-label {
+    font-family: "Source Sans Pro", sans-serif; 
+    font-weight: bold;
+    font-size: 15;
+    text-anchor: right;
+    display: inline;
+}
+
+/* This is the draft for the original slider, 
+which uses d3.drag rather than a discrete slider
+
+.ticks {
+  font: 10px sans-serif;
+    }
+
+.track,
+.track-inset,
+.track-overlay {
+    stroke-linecap: round;
+}
+
+.track {
+    stroke: #000;
+    stroke-opacity: 0.3;
+    stroke-width: 10px;
+}
+
+.track-inset {
+    stroke: #ddd;
+    stroke-width: 8px;
+}
+
+.track-overlay {
+    pointer-events: stroke;
+    stroke-width: 50px;
+    stroke: transparent;
+    cursor: crosshair;
+}
+
+.handle {
+    fill: #fff;
+    stroke: #000;
+    stroke-opacity: 0.5;
+    stroke-width: 1.25px;
+}*/
+

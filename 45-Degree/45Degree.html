@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  
+  <title>45-Degree-Line</title>
+
+  <!-- D3 from Murray == 4.5, taken from d3js.org-->
+  <script type="text/javascript" src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+   <meta name="viewport" content="width=device-width,
+     initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- the css is in an external file -->
+  <link rel="stylesheet" type="text/css" href="45Degree.css">
+  
+</head>
+
+
+<body>
+	<nav class="navbar navbar-default">
+      <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="#">Organic Fruit Data</a>
+      </div>
+        <ul class="nav navbar-nav">
+            <li><a href="http://www.bowdoin.edu/~mdang/FinalProject/OFFICIALHaDang/HomePageV2.html">Home</a></li>
+            <li class="active"><a href="http://www.bowdoin.edu/~mdang/FinalProject/OFFICIALHaDang/45-Degree/45Degree.html"
+              >45-Degree Line</a></li>
+            <li><a href="http://www.bowdoin.edu/~mdang/FinalProject/OFFICIALHaDang/Choropleth/choropleth.html">Choropleth</a></li>
+            <li><a href="http://www.bowdoin.edu/~mdang/FinalProject/OFFICIALHaDang/ScatterPlot/ScatterPlot.html">Scatter Plot</a></li>
+            <li><a href="http://www.bowdoin.edu/~mdang/FinalProject/OFFICIALHaDang/Credits.html">Credits/Sources
+            </a></li>
+        </ul>
+      </div>
+  </nav>
+
+    <!-- the js is in an external file -->
+    <script type="text/javascript" src="45Degree.js"></script>
+
+    <!-- div to hold the title, drop down menu, and home button -->
+    <div id="controls" style="max-width:450px">
+
+      <!-- drop down menu that choose the market area -->
+      <p>
+	<b>Market's Name:</b>
+	<br>
+	<select id="market">
+	  <optgroup id="marketDropDown">
+	    <option selected disabled hidden value=''>--select an option--</option> 
+	  </optgroup>
+	</select>
+      </p>
+	    
+      <!-- button to return to original graph --> 
+      <p>
+	<b>Click Home to Return to Original Graph</b>
+	<br>
+	<button id="returnHome" type="button">Home</button>
+      </p>
+
+      <p style="text-align:justify">
+	This is a interactive recreation of Professor Nelson's Expenditure-Income graph, 
+	where cumulative income share is shown on the x-axis, and cumulative expenditure
+	of organic fruits share is on the y-axis. As both of these values are market shares, 
+	their values are maximally one and minimally zero. The drop down menu allows for 
+	users to choose a market region they want to investigate. The home button allows 
+	them to return to the original multiline graph. 
+      </p>
+
+      <p style="text-align:justify">
+	The 45-degree line is supposed to show what happens in the relationship between consumption
+	and income when each income group spends the exact same amount on a type of organic fruit.
+	The curve lines display the actual relationship between these two variables in a specific
+	market region.
+      </p>
+
+      <p style="text-align:justify">
+	An example of how to interprete the graph: Louieville's expenditure/income line follows
+	the 45-degree line quite closely, which means that in this region, each income group spends 
+	relatively the same amount of money on organic fruits. However, Jacksonville's line arcs
+	up and away from the 45-degree line at first, and level out when income increases. This
+	demonstrates that people in the low and middle income brackets actually occupies a bigger
+	share of the total's expenditure on organic fruits than those in the upper income brackets. 
+	To put it more simply and crudely, in Jacksonville, the poorer and middle classes spend more
+	on organic fruit than the upper class. 
+      </p>
+
+    </div>
+    
+</body>
+
+</html>
+

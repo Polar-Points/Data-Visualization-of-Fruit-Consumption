@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- First Draft of Choropleth
+     -->
+
+<head>
+
+  <meta charset="utf-8">
+  
+  <title>Choropleth</title>
+
+  <!-- D3 from Murray == 4.5, taken from d3js.org-->
+  <script type="text/javascript" src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <script src="https://d3js.org/d3-queue.v2.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <meta name="viewport" content="width=device-width,
+     initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- javascript for tooltip is an external file-->
+  <script src="d3-tip.js"></script>
+
+  <!-- the css for the choropleth is in an external file -->
+  <link rel="stylesheet" type="text/css" href="choropleth.css" />
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="#">Organic Fruit Data</a>
+      </div>
+        <ul class="nav navbar-nav">
+            <li><a href="http://www.bowdoin.edu/~mdang/FinalProject/OFFICIALHaDang/HomePageV2.html">Home</a></li>
+            <li><a href="http://www.bowdoin.edu/~mdang/FinalProject/OFFICIALHaDang/45-Degree/45Degree.html"
+              >45-Degree Line</a></li>
+            <li class="active"><a href="http://www.bowdoin.edu/~mdang/FinalProject/OFFICIALHaDang/Choropleth/choropleth.html">Choropleth</a></li>
+            <li><a href="http://www.bowdoin.edu/~mdang/FinalProject/OFFICIALHaDang/ScatterPlot/ScatterPlot.html">Scatter Plot</a></li>
+            <li><a href="http://www.bowdoin.edu/~mdang/FinalProject/OFFICIALHaDang/Credits.html">Credits/Sources
+            </a></li>
+        </ul>
+      </div>
+  </nav>
+  
+  <!-- this is the drop down menu that allows for user to choose type of fruits -->
+  <div id="controls">
+
+    <p>
+      <b>Year:</b>
+      <br>
+      <select id="year">
+	<optgroup id="yearDropDown">
+	  <option selected disabled hidden value=''>--select an option--</option> 
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+	</optgroup>
+      </select>
+    </p>
+
+    <p>
+      <br>
+      <b>Fruit's Type:</b>
+      <br>
+      <select id="fruit">
+	<optgroup id="fruitDropDown">
+	  <option selected disabled hidden value=''>------select an option------</option>
+          <option value="oapplep">Organic Apple</option>
+          <option value="oblackbp">Organic Blackberry</option>
+          <option value="obluebp">Organic Blueberry</option>
+          <option value="ograpep">Organic Grapes</option>
+          <option value="ograpefp">Organic Grapefruit</option>
+          <option value="olemonp">Organic Lemon</option>
+	  <option value="oorangep">Organic Orange</option>
+	  <option value="oraspbp">Organic Rasberry</option>
+	  <option value="ostrawp">Organic Strawberry</option>
+	  <option value="oothp">Organic Others</option>
+	  <option value="capplep">Conventional Apple</option>
+	  <option value="cblackbp">Conventional Blackberry</option>
+	  <option value="cbluebp">Conventional Blueberry</option>
+	  <option value="cgrapep">Conventional Grapes</option>
+	  <option value="cgrapefp">Conventional Grapefruit</option>
+	  <option value="clemonp">Conventional Lemon</option>
+	  <option value="corangep">Conventional Orange</option>
+	  <option value="craspbp">Conventional Rasberry</option>
+	  <option value="cstrawp">Conventional Strawberry</option>
+	  <option value="cothp">Conventional Others</option>
+	</optgroup>
+      </select>
+    </p>
+
+    <!-- this is the button that allows for user to see the bubble or not --> 
+    <div id="bubblesButton" style="max-width:375px">
+      <br>
+      <p style="text-align:justify">
+	<b>Click to show or hide bubbles:</b>
+	<br>
+	<button id="bubblesOn">Show Bubbles</button>
+	<button id="bubblesOff">Hide Bubbles</button> 
+	<br><br><br>
+	This is a U.S. map that that shows the average price of fruit in a county.
+	Deeper shades of blue indicates more expensive prices, and specific ranges 
+	of prices are shown in the legends. Additionally, each red bubble represents   
+	a county's average fruit consumption. The dataset is sliced by month; the time
+	slider on the top left allows the user to see counties' monthly average price
+	and consumption of fruit.
+      </p>
+    </div>
+
+  </div>
+  
+  <!-- this is the button that allows for the user to zoom out --> 
+  <button id="zoomOut">
+    <img src="images/zoom-out2.png" width="55" height="55" alt="submit"/>
+  </button>
+
+  <!-- this is the slider that allows for the user to choose the month -->
+  <div id="sliderContainer"></div>
+
+  <!-- the js is in an external file --> 
+  <script type="text/javascript" src="choropleth.js"></script>
+
+</body>
+
+</html>

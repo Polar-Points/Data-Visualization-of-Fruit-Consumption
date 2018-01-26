@@ -1,0 +1,35 @@
+
+
+/*Set the color of the overall navbar*/
+.navbar-default {
+	background-color:  	#b62f2f;
+}
+
+/*Set the color  of the text in the navbar*/
+.navbar-default .navbar-nav > li > a {
+	color: #FFF5EE;
+	font-family: Helvetica Header;
+	font-size: 1.2em;
+	
+}
+
+/*set the color of the selected tab in the navbar*/
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background-color:  #800000; /*Background color of text*/
+    color:  #FFF5EE; /*Color of the text*/
+
+
+}
+
+/*set the color of the brand label*/
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color:#FFF5EE;
+    font-size: 1.5em;
+}
+
+
+
